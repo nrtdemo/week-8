@@ -28,8 +28,21 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
+            UpdateScore(((TwoZeroFourEightModel)m).GetBoard());
         }
 
+        private void UpdateScore(int[,] Board)
+        {
+            int sum = 0;
+            for (int x = 0; x < 4; x++) 
+            {
+                for (int y = 0; y < 4; y++)
+                {
+                    sum += Board[x, y];
+                }
+            }
+            ScoreShow.Text = Convert.ToString(sum);
+        }
         private void UpdateTile(Label l, int i)
         {
             if (i != 0)
@@ -51,6 +64,9 @@ namespace twozerofoureight
                     break;
                 case 8:
                     l.BackColor = Color.Red;
+                    break;
+                case 16:
+                    l.BackColor = Color.Blue;
                     break;
                 default:
                     l.BackColor = Color.Green;
