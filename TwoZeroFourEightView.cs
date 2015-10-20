@@ -14,7 +14,8 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
-       
+        ShowScoreRealtime SS = new ShowScoreRealtime();
+
         public TwoZeroFourEightView()
         {
             InitializeComponent();
@@ -25,23 +26,26 @@ namespace twozerofoureight
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
         }
 
+        
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
             UpdateScore(((TwoZeroFourEightModel)m).GetBoard());
         }
 
-        private void UpdateScore(int[,] Board)
+        private void UpdateScore(int[,] board)
         {
             int sum = 0;
             for (int x = 0; x < 4; x++) 
             {
                 for (int y = 0; y < 4; y++)
                 {
-                    sum += Board[x, y];
+                    sum += board[x, y];
                 }
             }
             lblScore.Text = Convert.ToString(sum);
+            SS.lblScore.Text = Convert.ToString(sum);
+            SS.Show();
         }
         private void UpdateTile(Label l, int i)
         {
