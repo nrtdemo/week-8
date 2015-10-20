@@ -41,7 +41,7 @@ namespace twozerofoureight
                     sum += Board[x, y];
                 }
             }
-            ScoreShow.Text = Convert.ToString(sum);
+            lblScore.Text = Convert.ToString(sum);
         }
         private void UpdateTile(Label l, int i)
         {

@@ -49,7 +49,7 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.NameScore = new System.Windows.Forms.Label();
-            this.ScoreShow = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl00
@@ -278,21 +278,21 @@
             this.NameScore.TabIndex = 20;
             this.NameScore.Text = "Score";
             // 
-            // ScoreShow
+            // lblScore
             // 
-            this.ScoreShow.AutoSize = true;
-            this.ScoreShow.Location = new System.Drawing.Point(220, 14);
-            this.ScoreShow.Name = "ScoreShow";
-            this.ScoreShow.Size = new System.Drawing.Size(13, 13);
-            this.ScoreShow.TabIndex = 21;
-            this.ScoreShow.Text = "0";
+            this.lblScore.AutoSize = true;
+            this.lblScore.Location = new System.Drawing.Point(220, 14);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(13, 13);
+            this.lblScore.TabIndex = 21;
+            this.lblScore.Text = "0";
             // 
             // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 409);
-            this.Controls.Add(this.ScoreShow);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.NameScore);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
@@ -344,7 +344,7 @@
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Label NameScore;
-        private System.Windows.Forms.Label ScoreShow;
+        private System.Windows.Forms.Label lblScore;
     }
 }
 
